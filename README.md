@@ -85,11 +85,11 @@ nome-do-repositorio/
 ![Página inicial](./Prints/Tela%20Principal.png)
 
 ### Formulário de edição
-![Página de edição](./prints/Editar.png)
+![Página de edição](./Prints/Editar.png)
 
 
 ### Tela com Post Publicado
-![Página de edição](./prints/Post%20Publicado.png)
+![Página de edição](./Prints/Post%20Publicado.png)
 
 ---
 
