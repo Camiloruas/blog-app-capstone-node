@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Post</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Editar Post</h1>
+    <form action="/posts/<%= post.id %>/edit" method="POST">
+      <label for="title">Título:</label><br />
+      <input
+        type="text"
+        id="title"
+        name="title"
+        value="<%= post.title %>"
+        required
+      /><br />
+      <label for="content">Conteúdo:</label><br />
+      <textarea id="content" name="content" required>
+<%= post.content %></textarea
+      ><br />
+      <button type="submit">Salvar</button>
+      <a href="/"><button type="button">Cancelar</button>
+      </a>
+    </form>
+  </body>
+</html>

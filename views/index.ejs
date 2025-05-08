@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Meu Blog</h1>
+    <p>Bem-Vnindo ao meu Blog 🤗</p>
+
+    <h2>Criar Novo Post</h2>
+    <form action="/posts" method="POST">
+      <label for="title">Título:</label><br />
+      <input type="text" id="title" name="title" required /><br />
+      <label for="content">Conteúdo:</label><br />
+      <!-- <textarea id="content" name="content" required></textarea><br /> -->
+      <textarea id="content" name="content" required placeholder="Digite  aqui seu Post ."></textarea><br />
+
+      <button type="submit">Publicar</button>
+    </form> <!-- ← AGORA o form termina aqui! ✅ -->
+    
+    <h2>Meus Posts</h2>
+    <% if (posts.length > 0) { %>
+      <% posts.forEach(post => { %>
+        <div>
+          <h3><%= post.title %></h3>
+          <p><%= post.content %></p>
+          <form action="/posts/<%= post.id %>/edit" method="GET" style="display: inline">
+            <button type="submit">Editar</button>
+          </form>
+          <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline">
+            <button type="submit">Excluir</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>Nenhum post encontrado.</p>
+    <% } %>
+    <%- include('partials/footer') %>
