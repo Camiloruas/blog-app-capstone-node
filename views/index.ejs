@@ -21,21 +21,39 @@
       <button type="submit">Publicar</button>
     </form> <!-- ← AGORA o form termina aqui! ✅ -->
     
-    <h2>Meus Posts</h2>
-    <% if (posts.length > 0) { %>
-      <% posts.forEach(post => { %>
-        <div>
-          <h3><%= post.title %></h3>
-          <p><%= post.content %></p>
-          <form action="/posts/<%= post.id %>/edit" method="GET" style="display: inline">
-            <button type="submit">Editar</button>
-          </form>
-          <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline">
-            <button type="submit">Excluir</button>
-          </form>
-        </div>
-      <% }) %>
-    <% } else { %>
-      <p>Nenhum post encontrado.</p>
-    <% } %>
-    <%- include('partials/footer') %>
+   <!-- Título da seção -->
+<h2>Meus Posts</h2>
+
+<!-- Verifica se há posts (se o array posts tem itens) -->
+<% if (posts.length > 0) { %>
+
+  <!-- Para cada post no array posts, executa o código abaixo -->
+  <% posts.forEach(post => { %>
+    <div>
+      <!-- Mostra o título do post -->
+      <h3><%= post.title %></h3>
+      <!-- Mostra o conteúdo do post -->
+      <p><%= post.content %></p>
+
+      <!-- Formulário para editar o post -->
+      <form action="/posts/<%= post.id %>/edit" method="GET" style="display: inline">
+        <!-- Botão que leva à página de edição do post -->
+        <button type="submit">Editar</button>
+      </form>
+
+      <!-- Formulário para excluir o post -->
+      <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline">
+        <!-- Botão que envia a solicitação para excluir o post -->
+        <button type="submit">Excluir</button>
+      </form>
+    </div>
+  <!-- Fecha o loop de posts -->
+  <% }) %>
+
+<!-- Se não houver posts, mostra esta mensagem -->
+<% } else { %>
+  <p>Nenhum post encontrado.</p>
+<% } %>
+
+<!-- Inclui o arquivo footer (rodapé) da página -->
+<%- include('partials/footer') %>
