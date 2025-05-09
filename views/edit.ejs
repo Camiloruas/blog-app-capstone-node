@@ -17,22 +17,14 @@
         value="<%= post.title %>"
         required
       /><br />
-      <!-- Campo para editar o título do post -->
-
       <label for="content">Conteúdo:</label><br />
       <textarea id="content" name="content" required>
 <%= post.content %></textarea
       ><br />
-      <!-- Área de texto para editar o conteúdo do post -->
-
       <button type="submit">Salvar</button>
-      <!-- Botão para enviar o formulário e salvar as alterações -->
-
-      <a href="/"><button type="button">Cancelar</button></a>
-      <!-- Botão para cancelar e voltar à página inicial -->
+      <a href="/"><button type="button">Cancelar</button>
+      </a>
     </form>
-
     <%- include('partials/footer') %>
-    <!-- Inclui o rodapé do site a partir de um arquivo parcial -->
   </body>
 </html>
