@@ -41,19 +41,19 @@ git clone https://github.com/Camiloruas/blog-app-capstone-node.git
 2. **Entre na pasta do projeto:**
 
 ```bash
-cd nome-do-repositorio
+cd blog-app-capstone-node
 ```
 
 3. **Instale as dependências:**
 
 ```bash
-npm install
+npm install express ejs
 ```
 
 4. **Inicie o servidor:**
 
 ```bash
-npm start
+node index.js
 ```
 
 5. **Abra no navegador:**
@@ -77,6 +77,7 @@ blog-app-capstone-node/
 |          |── footer.ejs           
 |
 ├── index.js        # Arquivo principal da aplicação
+|── package-loc.json
 ├── package.json
 └── README.md
 ```
