@@ -35,7 +35,7 @@ Este é um projeto simples de blog criado com Node.js, Express e EJS. Ele permit
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/Camiloruas/nome-do-repositorio.git
+git clone https://github.com/Camiloruas/blog-app-capstone-node.git
 ```
 
 2. **Entre na pasta do projeto:**
@@ -65,14 +65,18 @@ Acesse [http://localhost:3000](http://localhost:3000)
 ## Estrutura de Pastas
 
 ```
-nome-do-repositorio/
+blog-app-capstone-node/
 │
-├── public/             # Arquivos estáticos (CSS, imagens, etc.)
-├── views/              # Arquivos EJS (templates)
-│   ├── index.ejs
+├── public/
+|     |───styles.css
+├── views/           # Arquivos EJS (templates)
+│   |
+|   ├── index.ejs
 │   └── edit.ejs
-├── routes/             # (opcional) Rotas, se você tiver separado
-├── app.js              # Arquivo principal da aplicação
+|   |──paartials/
+|          |── footer.ejs           
+|
+├── index.js        # Arquivo principal da aplicação
 ├── package.json
 └── README.md
 ```
@@ -108,4 +112,3 @@ nome-do-repositorio/
 Este projeto é livre para fins de estudo e aprendizado. Sinta-se à vontade para modificar e adaptar conforme necessário.
 
 
-[def]: ./prints/pagina-inicial.png
