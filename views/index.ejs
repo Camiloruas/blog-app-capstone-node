@@ -8,52 +8,48 @@
   </head>
   <body>
     <h1>Meu Blog</h1>
-    <p>Bem-Vnindo ao meu Blog 🤗</p>
+    <p>Bem-Vindo ao meu Blog 🤗</p>
 
     <h2>Criar Novo Post</h2>
     <form action="/posts" method="POST">
       <label for="title">Título:</label><br />
       <input type="text" id="title" name="title" required /><br />
+      
       <label for="content">Conteúdo:</label><br />
-      <!-- <textarea id="content" name="content" required></textarea><br /> -->
-      <textarea id="content" name="content" required placeholder="Digite  aqui seu Post ."></textarea><br />
+      <textarea id="content" name="content" required placeholder="Digite aqui seu Post."></textarea><br />
 
       <button type="submit">Publicar</button>
-    </form> <!-- ← AGORA o form termina aqui! ✅ -->
-    
-   <!-- Título da seção -->
-<h2>Meus Posts</h2>
+    </form>
 
-<!-- Verifica se há posts (se o array posts tem itens) -->
-<% if (posts.length > 0) { %>
+    <!-- Título da seção -->
+    <h2>Meus Posts</h2>
 
-  <!-- Para cada post no array posts, executa o código abaixo -->
-  <% posts.forEach(post => { %>
-    <div>
-      <!-- Mostra o título do post -->
-      <h3><%= post.title %></h3>
-      <!-- Mostra o conteúdo do post -->
-      <p><%= post.content %></p>
+    <!-- Verifica se há posts -->
+    <% if (posts.length > 0) { %>
+      <!-- Loop para exibir cada post -->
+      <% posts.slice().reverse().forEach(post => { %>
+        <div class="post">
+          <h3><%= post.title %></h3>
+          <p><%= post.content %></p>
 
-      <!-- Formulário para editar o post -->
-      <form action="/posts/<%= post.id %>/edit" method="GET" style="display: inline">
-        <!-- Botão que leva à página de edição do post -->
-        <button type="submit">Editar</button>
-      </form>
+          <form action="/posts/<%= post.id %>/edit" method="GET" style="display: inline">
+            <button type="submit">Editar</button>
+          </form>
 
-      <!-- Formulário para excluir o post -->
-      <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline">
-        <!-- Botão que envia a solicitação para excluir o post -->
-        <button type="submit">Excluir</button>
-      </form>
-    </div>
-  <!-- Fecha o loop de posts -->
-  <% }) %>
+          <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline">
+            <button type="submit">Excluir</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>Nenhum post encontrado.</p>
+    <% } %>
 
-<!-- Se não houver posts, mostra esta mensagem -->
-<% } else { %>
-  <p>Nenhum post encontrado.</p>
-<% } %>
+   
+  <footer>
+    © 2025 Meu Blog. Todos os direitos reservados.
+  </footer>
+</body>
 
-<!-- Inclui o arquivo footer (rodapé) da página -->
-<%- include('partials/footer') %>""
+  </body>
+</html>
