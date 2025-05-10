@@ -67,7 +67,7 @@ Acesse [http://localhost:3000](http://localhost:3000)
 ```
 blog-app-capstone-node/
 │
-├── public/
+├── public/          # Arquivos CSS 
 |     |───styles.css
 ├── views/           # Arquivos EJS (templates)
 │   |
