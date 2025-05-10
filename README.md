@@ -87,14 +87,14 @@ blog-app-capstone-node/
 ## Prints do projeto
 
 ### Página Inicial
-![Página inicial](./Prints/Tela%20Principal.png)
+![Página inicial](./Prints/Tela-Principal.png)
+
+### Tela com Post Publicado
+![Página de edição](./Prints/Post-Publicado.png)
 
 ### Formulário de edição
 ![Página de edição](./Prints/Editar.png)
 
-
-### Tela com Post Publicado
-![Página de edição](./Prints/Post%20Publicado.png)
 
 ---
 
