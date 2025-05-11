@@ -19,7 +19,7 @@ Este é um projeto simples de blog criado com Node.js, Express e EJS. Ele permit
 - Node.js
 - Express.js
 - EJS (Embedded JavaScript Templates)
-- HTML e CSS básico
+- HTML e CSS 
 
 ---
 
@@ -90,7 +90,7 @@ blog-app-capstone-node/
 ![Página inicial](./Prints/Tela-Principal.png)
 
 ### Tela com Post Publicado
-![Página de edição](./Prints/Post-Publicado.png)
+![Página com Publicado](./Prints/Post-Publicado.png)
 
 ### Formulário de edição
 ![Página de edição](./Prints/Editar.png)
