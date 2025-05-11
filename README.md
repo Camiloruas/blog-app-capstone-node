@@ -1,7 +1,7 @@
 
 # Meu Blog com Node.js e Express
 
-Este é um projeto simples de blog criado com Node.js, Express e EJS. Ele permite criar, visualizar, editar e excluir posts. Os dados são armazenados em memória (ou seja, não usa banco de dados), ideal para fins de aprendizado e prática de backend com rotas HTTP.
+Este é um projeto simples de blog criado com Node.js, Express e EJS. Ele permite criar, visualizar, editar e excluir posts. Os dados são armazenados em memória (ou seja, não usa banco de dados), somente para fins de aprendizado e prática de backend com rotas HTTP.
 
 ---
 
